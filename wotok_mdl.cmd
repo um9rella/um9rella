@@ -479,6 +479,7 @@ echo VisioPro2019Retail
 echo ProPlus2019Volume
 echo ProjectPro2019Volume
 echo VisioPro2019Volume
+echo Standard2019Volume
 echo Example: ProPlus2019Volume
 echo Default (Enter): %product%
 set /p product=Choice: 
@@ -486,10 +487,12 @@ if %1 NEQ vl (
 if %product%==ProPlus2019Retail goto:eof
 if %product%==ProjectPro2019Retail goto:eof
 if %product%==VisioPro2019Retail goto:eof
+if %product%==Standard2019Volume goto:eof
 )
 if %product%==ProPlus2019Volume (set "pidkeys=NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP"&&goto:eof)
 if %product%==ProjectPro2019Volume (set "pidkeys=B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B"&&goto:eof)
 if %product%==VisioPro2019Volume (set "pidkeys=9BGNQ-K37YR-RQHF2-38RQ3-7VCBB"&&goto:eof)
+if %product%==Standard2019Volume (set "pidkeys="&&goto:eof)
 goto:product
 
 
